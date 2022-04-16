@@ -15,10 +15,10 @@ public class BaseDriverHooks {
     public void quitAndroidDriver(DriverPool drivers) {
         Optional.ofNullable(drivers.getAndroidDriver())
                 .ifPresent(
-                    driver -> {
-                        driver.quit();
-                        drivers.setAndroidDriver(null);
-                    }
+                        driver -> {
+                            driver.quit();
+                            drivers.setAndroidDriver(null);
+                        }
                 );
 
     }

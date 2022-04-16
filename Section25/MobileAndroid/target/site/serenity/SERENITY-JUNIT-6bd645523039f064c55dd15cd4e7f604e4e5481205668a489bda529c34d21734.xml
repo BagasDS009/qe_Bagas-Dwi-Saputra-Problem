@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="As an User, I want to success Login, So that I can see my home page" skipped="0" tests="1" time="6.92" timestamp="2022-04-17 06:25:26"><testcase name="As an User, I cannot Login because wrong email or password"><error message="The following error occurred: Connection refused: connect&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'MOOK-HON', ip: '192.168.100.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'&#10;Driver info: driver.version: AndroidDriver" type="org.openqa.selenium.WebDriverException">The following error occurred: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOOK-HON', ip: '192.168.100.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: AndroidDriver</error><system-err>The following error occurred: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOOK-HON', ip: '192.168.100.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: AndroidDriver&#13;
+io.appium.java_client.remote.AppiumCommandExecutor.lambda$6(AppiumCommandExecutor.java:262)&#13;
+io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)&#13;
+io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)&#13;
+io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)&#13;
+io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)&#13;
+io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:363)&#13;
+io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)&#13;
+io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)&#13;
+io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)&#13;
+io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:97)&#13;
+test.alta.driver.AndroidDriverPool.create(AndroidDriverPool.java:27)&#13;
+test.alta.pageobject.BasePageObject.getDriver(BasePageObject.java:19)&#13;
+test.alta.pageobject.BasePageObject.onWait(BasePageObject.java:25)&#13;
+test.alta.pageobject.BasePageObject.waitUntilPresence(BasePageObject.java:33)&#13;
+test.alta.pages.LoginScreen.isOnLoginPage(LoginScreen.java:24)&#13;
+test.alta.stepdefinitions.LoginSteps.onTheLoginPage(LoginSteps.java:17)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:64)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:104)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:73)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)&#13;
+</system-err></testcase></testsuite>

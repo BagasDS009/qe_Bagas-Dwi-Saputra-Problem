@@ -1,8 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.127 sec <<< FAILURE! - in CucumberTestSuite
-initializationError(CucumberTestSuite)  Time elapsed: 0.033 sec  <<< ERROR!
-java.lang.NoClassDefFoundError: io/cucumber/core/runtime/TypeRegistryConfigurerSupplier
-Caused by: java.lang.ClassNotFoundException: io.cucumber.core.runtime.TypeRegistryConfigurerSupplier
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 4, Time elapsed: 30.004 sec <<< FAILURE! - in CucumberTestSuite
+user on the login page(As an User, I cannot Login because wrong email or password)  Time elapsed: 5.309 sec  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+The following error occurred: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOOK-HON', ip: '192.168.100.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: AndroidDriver
+Caused by: java.net.ConnectException: Connection refused: connect
+
+As an User, I cannot Login because wrong email or password  Time elapsed: 0.001 sec  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: 
+The following error occurred: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOOK-HON', ip: '192.168.100.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: AndroidDriver
+Caused by: java.net.ConnectException: Connection refused: connect
 

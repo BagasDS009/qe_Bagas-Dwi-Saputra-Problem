@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class AndroidDriverPool {
     public static AndroidDriver create() {
@@ -24,6 +25,7 @@ public class AndroidDriverPool {
 
         try {
             driver = new AndroidDriver<AndroidElement>(new URL(appiumUrl), caps);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

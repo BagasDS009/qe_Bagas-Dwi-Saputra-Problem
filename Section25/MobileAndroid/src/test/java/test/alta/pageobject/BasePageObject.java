@@ -41,8 +41,8 @@ public class BasePageObject {
         waitUntilClickable(by).click();
     }
 
-    public void onType(By by, CharSequence... keyToSend) {
-        waitUntilPresence(by).sendKeys(keyToSend);
+    public void onType(By by, CharSequence... keysToSend) {
+        waitUntilPresence(by).sendKeys(keysToSend);
     }
 
     public void clear(By by){

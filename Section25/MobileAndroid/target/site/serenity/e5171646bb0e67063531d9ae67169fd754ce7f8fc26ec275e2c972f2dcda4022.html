@@ -23,18 +23,24 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -58,25 +64,18 @@
 </script>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/link.css"/>
-<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
-<!--CHART.JS-->
-<script src="chartjs/chart.js"></script>
-<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/patternomaly.min.js"></script>
-<script>
-    // Register the plugin to all charts:
-    Chart.register(ChartDataLabels);
-</script>
-<!-- JQuery-UI -->
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
 
 <script>
     jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
@@ -98,7 +97,6 @@
         };
     };
 </script>
-
 
 
 
@@ -144,7 +142,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"As an User, I want to success Login, So that I can see my home page","type":"feature","href":"e5171646bb0e67063531d9ae67169fd754ce7f8fc26ec275e2c972f2dcda4022.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-exclamation-triangle-fill error-icon \u0027 title\u003d\u0027ERROR\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -169,7 +167,6 @@
         });
     </script>
 </head>
-
 
 <body class="results-page">
 <div id="topheader">
@@ -215,7 +212,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-04-2022 06:25</span>
     <br style="clear:left"/>
 </div>
 
@@ -229,10 +226,9 @@
                     <div>
                         <div clas="table">
                             <div class="row">
-
                                     <div class="col-sm-12">
                                         <span>
-                                            <h2><i class="bi bi-book"></i> Feature: As An User, I Want To Success Login, So That I Can See My Home Page</h2>
+                                            <h2><i class="bi bi-book"></i> Feature:  As An User, I Want To Success Login, So That I Can See My Home Page</h2>
                                         </span>
                                     </div>
                                 </div>
@@ -265,17 +261,76 @@
                                 <div id="specs" class="tab-pane fade in active">
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-sm-4">
-                                                <h3>Feature Coverage By Scenario</h3>
+                                            <div class="col-sm-12">
 
-                                                <!-- REQUIREMENTS PIE CHART -->
+                                                    <!--- TOC --->
+                                                    <div id="toc">
+                                                        <h3>Overview</h3>
+                                                        <table class="table" id="toc-table">
+                                                                        <tr>
+                                                                            <td style="width:95%;" class="toc-title">
+                                                                                <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#e6ebd102dc6dd1756b20c34129b518311b58016e080e26efa52eab25606244f3"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario: As an User, I cannot Login because wrong email or password
+                                                                                    </a>
+                                                                                </span>
+                                                                            </td>
+                                                                            <td style="width:5%;">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td class="icons-bar">
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="6bd645523039f064c55dd15cd4e7f604e4e5481205668a489bda529c34d21734.html"
+                                                                                               title="View test results">
+                                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                                                </a>
 
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
 
-                                                <div id="tree"></div>
+                                                                                                <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                                   href="6bd645523039f064c55dd15cd4e7f604e4e5481205668a489bda529c34d21734.html"
+                                                                                                   title="View test results">
+                                                                                                    <i class="bi bi-eyeglasses"></i>
+                                                                                                </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--- END OF TOC --->
 
+                                                    <h3>Scenarios</h3>
+
+                                                        <a name="5e921e7b-76a0-4c83-badf-7dea8b07f60b"></a>
+
+
+                                                            <div class="scenario-docs card" id="e6ebd102dc6dd1756b20c34129b518311b58016e080e26efa52eab25606244f3">
+                                                                <div class="scenario-docs card-header error"
+                                                                     style="min-height:1.5em;">
+                                                                    <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="6bd645523039f064c55dd15cd4e7f604e4e5481205668a489bda529c34d21734.html"
+                                                                   title="View test results">Scenario: As an User, I cannot Login because wrong email or password</a>
+                                                            </span>
+                                                                        <span class="scenario-result-icon">
+                                                                
+
+                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                            </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given user on the login page</p>
+                                                                        <p>When user input &quot;bagasdwisaputra19@gmail.com&quot; on email field</p>
+                                                                        <p>And user input &quot;password&quot; on password field</p>
+                                                                        <p>And user click login button</p>
+                                                                        <p>Then user see error message &quot;Wrong Email or Password&quot;</p>
+                                                                    <div class="examples">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -285,75 +340,201 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <h3>Feature Coverage By Scenario</h3>
-                                                <!-- TEST RESULT PIE CHART -->
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
-                                                <!-- Severity bar chart -->
-                                                <div class="chart-container" style="position: relative; width:30vw">
-                                                    <canvas id="severityChart" width="300" height="300"></canvas>
+
+                                                <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                    <div class="ct-chart ct-square"></div>
                                                 </div>
+                                                <script>
+
+                                                    var labels = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '100%', ' ', ' ', ' '];
+                                                    // Our series array that contains series objects or in this case series data arrays
+
+                                                    var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Aborted tests (automated)', value: 0}, {meta: 'Aborted tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 1}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                    // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                    // as you saw in the previous example
+                                                    var options = {
+                                                        width: 350,
+                                                        height: 300
+                                                    };
+
+                                                    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                        new Chartist.Pie('.ct-chart', {
+                                                            series: series,
+                                                            labels: labels,
+                                                        }, {
+                                                            donut: true,
+                                                            donutWidth: 60,
+                                                            donutSolid: true,
+                                                            startAngle: 270,
+                                                            showLabel: true
+                                                        }, options);
+                                                    });
+
+                                                </script>
                                             </div>
+                                            <div class="col-sm-8">
 
-                                            <div class="col-sm-4">
-                                                <h4><i class="bi bi-graph-up"></i> Test Performance</h4>
-
-                                                <!-- Duration bar chart -->
-                                                <div class="chart-container" style="position: relative; width:30vw">
-                                                    <canvas id="durationChart" width="300" height="300"></canvas>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="bi bi-gear"></i> Automated Tests</h3>
-
-                                                    <table class="scenario-result-table table"
-                                                           id="scenario-results">
+                                                    <table class="table">
                                                         <thead>
                                                         <tr>
-                                                                <th>feature</th>
-                                                            <th class="test-name-column">Scenario</th>
-                                                            <th>Steps</th>
-                                                            <th>Started</th>
-                                                            <th>Duration</th>
-                                                            <th>Result</th>
+                                                            <th scope="col">Scenario Results (including rows of test
+                                                                data)
+                                                            </th>
+                                                            <th scope="col" colspan="2" class="automated-stats">
+                                                                Automated
+                                                            </th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="e5171646bb0e67063531d9ae67169fd754ce7f8fc26ec275e2c972f2dcda4022.html">As an User, I Want to success Login, So that I can see my home page</a>
-                                                                    </td>
-                                                                <td>
-                                                                        <a href="">As an User, I cannot Login because wrong email or password</a>
+                                                        <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-check-circle-fill success-icon'></i>&nbsp;Passing
                                                                 </td>
-                                                                <td>5</td>
-                                                                <td></td>
-                                                                <td></td>
-                                                                <td>
-                                                                        <i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span
-                                                                            style="display:none">UNDEFINED</span>
-                                                                                                                                    </td>
-                                                            </tr>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-hourglass-top pending-icon'></i>&nbsp;Pending
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-slash-circle ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-skip-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                            class='bi bi-exclamation-octagon-fill aborted-icon'></i>&nbsp;Aborted
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr>
+                                                                    <td colspan="3"><a href="8e9bf9bc4a099721f7bee400adff7ddf2e4825d4cdd6d6b37228e3d33a079de9.html"><i
+                                                                                    class='bi bi-x-circle failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    </td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='bi bi-x-circle-fill failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <a href="01f0f213982782e249576d8cc3f9c9e2ac90eabb11d20311640e1a7dbaedfb71.html"><i
+                                                                                class='bi bi-exclamation-triangle-fill error-icon'></i>&nbsp;Broken</a>
+                                                                </td>
+                                                            <td class="automated-stats">1</td>
+                                                            <td class="automated-stats">100%</td>
+                                                        <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='bi bi-slash-circle-fill compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                            <td class="automated-stats">0</td>
+                                                            <td class="automated-stats"> </td>
+                                                        </tr>
+                                                        <tr class="summary-stats">
+                                                            <td class="aggregate-result-count">Total</td>
+                                                            <td class="automated-stats">1</td>
+                                                            <td class="automated-stats"></td>
+                                                        </tr>
                                                         </tbody>
                                                     </table>
-
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
-
-                                                    No manual tests were recorded
-
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Tests Started</th>
+                                                            <th>Tests Finished</th>
+                                                            <th>Total Duration</th>
+                                                            <th>Fastest Test</th>
+                                                            <th>Slowest Test</th>
+                                                            <th>Average Execution Time</th>
+                                                            <th>Total Execution Time</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>17-04-2022 06:25:26 +0700</td>
+                                                            <td>17-04-2022 06:25:33 +0700</td>
+                                                            <td>6s</td>
+                                                            <td>6s</td>
+                                                            <td>6s</td>
+                                                            <td>6s</td>
+                                                            <td>6s</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
-                                        </div>
 
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <h3><i class="bi bi-gear"></i> Automated Tests</h3>
+
+                                                        <table class="scenario-result-table table"
+                                                               id="scenario-results">
+                                                            <thead>
+                                                            <tr>
+                                                                <th class="test-name-column">Scenario</th>
+                                                                <th>Steps</th>
+                                                                <th>Started</th>
+                                                                <th>Duration</th>
+                                                                <th>Result</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="scenario-result ERROR">
+                                                                    <td>
+                                                                            <a href="6bd645523039f064c55dd15cd4e7f604e4e5481205668a489bda529c34d21734.html">As an User, I cannot Login because wrong email or password</a>
+                                                                    </td>
+                                                                    <td>5</td>
+                                                                    <td>06:25:26</td>
+                                                                    <td>6s 916ms</td>
+                                                                    <td>
+                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
+                                                                                style="display:none">ERROR</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
+
+                                                        No manual tests were recorded
+
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -361,362 +542,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.2.1</span>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="version">Serenity BDD version 3.0.5</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Chart data -->
-    <!-- PIE CHART -->
-    <script>
-
-        // The results pie chart
-        const outcomeChartCtx = document.getElementById('resultChart');
-
-        // Options define for display value on top of bars
-        const outcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "a57b36ae56007229f4a26f6278ca702e153e58461fabd6b7a2df0282990e894b.html" },
-            { title: 'Pending Scenarios', link: "6f572c44f18ba9d75c0a45c2d34e98b2cdb116e99f649ccd8ac723114964f474.html" },
-            { title: 'Ignored Scenarios', link: "b07154df9b55b214de6b40f7b6f89cef456a36e4a3c5862211da7417b3ac9e70.html" },
-            { title: 'Skipped Scenarios', link: "7bf18ed971454a9e11f3d6d1c257ac3022b4bb59edeb12609124dc4f183eb1ba.html" },
-            { title: 'Aborted Scenarios',  link: "733e7babf0b5867be6b6d58aac521bb2a4b7e7702115f55637e33544fcaf463d.html"},
-            { title: 'Failed Scenarios', link: "22db17d894c2a5d7891dd213aa7127de19adb8160253c5b8b92899a7d35ed3f0.html"  },
-            { title: 'Broken Scenarios', link: "01f0f213982782e249576d8cc3f9c9e2ac90eabb11d20311640e1a7dbaedfb71.html"    },
-            { title: 'Compromised Scenarios',  link: "a3c5a9ff89a3a2a19b6469b7be4ab8af351f9619d0067b6821ca4e9d997987e8.html" },
-        ]
-        const outcomeData = {
-            labels: ['Passing Scenarios', 'Pending Scenarios', 'Ignored Scenarios', 'Skipped Scenarios', 'Aborted Scenarios', 'Failed Scenarios', 'Broken Scenarios', 'Compromised Scenarios','Undefined Scenarios'],
-            datasets: [{
-                label: 'Test Results',
-                fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
-                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                borderWidth: 1,
-            }]
-        }
-        const outcomeOptions = {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom'
-                },
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%' || percentage === 'NaN%') {
-                            return '';
-                        } else {
-                            return percentage;
-                        }
-                    },
-                },
-            }
-        }
-
-        const outcomeChart = new Chart(outcomeChartCtx, {
-            type: 'doughnut',
-            data: outcomeData,
-            options: outcomeOptions,
-            plugins: [
-                {
-                    id: 'text',
-                    beforeDraw: function (chart, a, b) {
-                        var width = chart.width,
-                            height = chart.height,
-                            ctx = chart.ctx;
-
-                        ctx.restore();
-                        var fontSize = (height / 200).toFixed(1);
-                        ctx.font = fontSize + "em sans-serif";
-                        ctx.textBaseline = "middle";
-
-                        var text = " "
-                        textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
-                        textY = (height / 2) - 40;
-
-                        ctx.fillText(text, textX, textY);
-                        ctx.save();
-                    }
-                }]
-        });
-
-        function clickHandler(click) {
-            const points = outcomeChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(outcomeDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        outcomeChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END PIE CHART -->
-    <!-- PIE CHART -->
-    <script>
-
-        // The results pie chart
-        const requirementsChartCtx = document.getElementById('requirementChart');
-
-        // Options define for display value on top of bars
-        const requirementsOutcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "a57b36ae56007229f4a26f6278ca702e153e58461fabd6b7a2df0282990e894b.html" },
-            { title: 'Pending Scenarios', link: "6f572c44f18ba9d75c0a45c2d34e98b2cdb116e99f649ccd8ac723114964f474.html" },
-            { title: 'Ignored Scenarios', link: "b07154df9b55b214de6b40f7b6f89cef456a36e4a3c5862211da7417b3ac9e70.html" },
-            { title: 'Skipped Scenarios', link: "7bf18ed971454a9e11f3d6d1c257ac3022b4bb59edeb12609124dc4f183eb1ba.html" },
-            { title: 'Aborted Scenarios',  link: "733e7babf0b5867be6b6d58aac521bb2a4b7e7702115f55637e33544fcaf463d.html"},
-            { title: 'Failed Scenarios', link: "22db17d894c2a5d7891dd213aa7127de19adb8160253c5b8b92899a7d35ed3f0.html"  },
-            { title: 'Broken Scenarios', link: "01f0f213982782e249576d8cc3f9c9e2ac90eabb11d20311640e1a7dbaedfb71.html"    },
-            { title: 'Compromised Scenarios',  link: "a3c5a9ff89a3a2a19b6469b7be4ab8af351f9619d0067b6821ca4e9d997987e8.html" },
-            { title: 'Undefined Scenarios',  link: "" },
-        ]
-        const requirementsOutcomeData = {
-            labels: ['Passing Scenarios', 'Pending Scenarios', 'Ignored Scenarios', 'Skipped Scenarios', 'Aborted Scenarios', 'Failed Scenarios', 'Broken Scenarios', 'Compromised Scenarios','Undefined Scenarios'],
-            datasets: [{
-                label: 'Feature Coverage',
-                fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
-                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                borderWidth: 1,
-            }]
-        }
-        const requirementsOutcomeOptions = {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom'
-                },
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        let sum = 0;
-                        let dataArr = ctx.chart.data.datasets[0].data;
-                        dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%' || percentage === 'NaN%') {
-                            return '';
-                        } else {
-                            return percentage;
-                        }
-                    },
-                },
-            }
-        }
-
-        const requirementsChart = new Chart(requirementsChartCtx, {
-            type: 'doughnut',
-            data: requirementsOutcomeData,
-            options: requirementsOutcomeOptions,
-            plugins: [
-                {
-                    id: 'text',
-                    beforeDraw: function (chart, a, b) {
-                        var width = chart.width,
-                            height = chart.height,
-                            ctx = chart.ctx;
-
-                        ctx.restore();
-                        var fontSize = (height / 200).toFixed(1);
-                        ctx.font = fontSize + "em sans-serif";
-                        ctx.textBaseline = "middle";
-
-                        var text = " "
-                        textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
-                        textY = (height / 2) - 40;
-
-                        ctx.fillText(text, textX, textY);
-                        ctx.save();
-                    }
-                }]
-        });
-
-        function reqsClickHandler(click) {
-            const points = requirementsChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length && requirementsOutcomeDetailsReports[firstPoint.index].link) {
-                const firstPoint = points[0];
-                window.open(requirementsOutcomeDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        requirementsChartCtx.onclick = reqsClickHandler;
-    </script>
-    <!-- END PIE CHART -->
-
-    <!-- SUMMARY BAR CHART -->
-    <script>
-
-        // The Severity bar chart
-        const severityChartCtx = document.getElementById('severityChart');
-
-        // Options define for display value on top of bars
-
-        const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "a57b36ae56007229f4a26f6278ca702e153e58461fabd6b7a2df0282990e894b.html" },
-            { title: 'Pending Scenarios', link: "6f572c44f18ba9d75c0a45c2d34e98b2cdb116e99f649ccd8ac723114964f474.html" },
-            { title: 'Ignored Scenarios', link: "b07154df9b55b214de6b40f7b6f89cef456a36e4a3c5862211da7417b3ac9e70.html" },
-            { title: 'Skipped Scenarios', link: "7bf18ed971454a9e11f3d6d1c257ac3022b4bb59edeb12609124dc4f183eb1ba.html" },
-            { title: 'Aborted Scenarios',  link: "733e7babf0b5867be6b6d58aac521bb2a4b7e7702115f55637e33544fcaf463d.html"},
-            { title: 'Failed Scenarios', link: "22db17d894c2a5d7891dd213aa7127de19adb8160253c5b8b92899a7d35ed3f0.html"  },
-            { title: 'Broken Scenarios', link: "01f0f213982782e249576d8cc3f9c9e2ac90eabb11d20311640e1a7dbaedfb71.html"    },
-            { title: 'Compromised Scenarios',  link: "a3c5a9ff89a3a2a19b6469b7be4ab8af351f9619d0067b6821ca4e9d997987e8.html" },
-        ]
-        const severityData = {
-            labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
-            datasets: [
-                {
-                    label: 'Automated',
-                    data: [0,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                    borderWidth: 1
-                },
-                {
-                    label: 'Manual',
-                    data: [0,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.25)','rgba(165, 199, 238, 0.25)','rgba(168, 168, 168, 0.25)','rgba(238, 224, 152, 0.375)','rgba(255, 153, 102, 0.25)','rgba(255, 22, 49, 0.25)','rgba(255, 97, 8, 0.25)','rgba(255, 104, 255, 0.25)','rgba(83, 50, 168, 0.25)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
-                    borderWidth: 1
-                },
-
-            ]
-        }
-        const severityOptions = {
-            responsive: true,
-            skipNull: true,
-            scales: {
-                x: {
-                    stacked: true,
-                },
-                y: {
-                    stacked: true,
-                }
-            },
-            plugins: {
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        if (value === 0) {
-                            return '';
-                        } else {
-                            return value;
-                        }
-                    },
-                }
-            }
-        }
-        const severityChart = new Chart(severityChartCtx, {
-            type: 'bar',
-            data: severityData,
-            options: severityOptions
-        });
-
-        function clickHandler(click) {
-            const points = severityChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(severityDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        severityChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END SUMMARY CHART -->
-
-    <!-- DURATION CHART -->
-    <script>
-
-        // Options define for display value on top of bars
-        const durationDetailsReports = [
-                {title: "Under 1 second", link: "fce65210f61a423d23af4ad3c64a4b06f39d287dd770cccb1468edcccaf685f5.html"},
-                {title: "1 to 10 seconds", link: "082695b9e1103ff998025e00900dcc7d9ce0e3c7ce42e197ed7bd1034bb97d0e.html"},
-                {title: "10 to 30 seconds", link: "e502c648786e3b5c9b9d27b0f2a14b3e4dc926ad59857afda677d07c449628f2.html"},
-                {title: "30 to 60 seconds", link: "d8f34849c167c5d17554aea231a949f74a6570d4093e38b63aa2a93005ffa2be.html"},
-                {title: "1 to 2 minutes", link: "20ff8e3e85ea983744720ad9390d23e939f7a74976d21559c8a05cb1cef7760c.html"},
-                {title: "2 to 5 minutes", link: "167970fcaa2b3ecd49df70bcd01424434ba78a7c9728ebf82345de759656e4f1.html"},
-                {title: "5 to 10 minutes", link: "1e0eb0e6cd12b2f7c8325058b7aa40d9658ee7d000bcc3e132e29b384dfe6ec3.html"},
-                {title: "10 minutes or over", link: "37a0969b8773dbf22e5daff55c1df9bc858b8d86a1b24f6be2fdacac594aa7b8.html"},
-        ]
-        // The Severity bar chart
-        const durationChartCtx = document.getElementById('durationChart');
-
-        // Options define for display value on top of bars
-
-        const durationData = {
-            labels: ['Under 1 second','1 to 10 seconds','10 to 30 seconds','30 to 60 seconds','1 to 2 minutes','2 to 5 minutes','5 to 10 minutes','10 minutes or over'],
-            datasets: [{
-                label: 'Number of tests per duration',
-                fill: false,
-                data: ['0','0','0','0','0','0','0','0'],
-                backgroundColor: 'rgba(83, 146, 255,0.5)',
-                borderColor: 'rgba(83, 146, 255, 1)',
-            }]
-        }
-        const durationOptions = {
-            responsive: true,
-            plugins: {
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        if (value > 0) {
-                            return value;
-                        } else {
-                            return '';
-                        }
-                    },
-                },
-                tooltip: {
-                    enabled: true,
-                    usePointStyle: true,
-                    callbacks: {
-                        label: (data) => {
-                            return data.parsed.y + ' tests'
-                        }
-                    },
-                },
-            },
-        }
-
-        const durationChart = new Chart(durationChartCtx, {
-            type: 'bar',
-            data: durationData,
-            options: durationOptions
-        });
-
-        function durationClickHandler(click) {
-            const points = durationChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(durationDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-
-        durationChartCtx.onclick = durationClickHandler;
-    </script>
-    <!-- END DURATION CHART -->
 </body>
 </html>
